@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SupplierController;
 use App\Http\Controllers\Admin\UserController;
 
 /*
@@ -23,6 +24,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('','App\Http\Controllers\Admin\DashboardController@index');
 
     Route::resource('categories', CategoryController::class);
+    Route::resource('suppliers', SupplierController::class);
 
     Route::resource('users', UserController::class);
     Route::resource('roles', RoleController::class);
