@@ -14,7 +14,6 @@
                 <table id="file_export" class="table table-striped table-bordered display">
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th>Name</th>
                             <th>Action</th>
                         </tr>
@@ -23,7 +22,6 @@
                         
                         @foreach ($categories as $category)
                         <tr>
-                            <td>{{$category->id}}</td>
                             <td>{{$category->name}}</td>
                             
                             <td>
