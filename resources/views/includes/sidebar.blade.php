@@ -2,10 +2,17 @@
     <ul id="slide-out" class="sidenav">
         <li>
             <ul class="collapsible p-t-30">
-                 <li>
+                <li>
                     <a href="{{route('dashboard')}}" class="collapsible-header">
                         <i class="material-icons">dashboard</i>
                         <span class="hide-menu">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route('categories.index')}}" class="collapsible-header">
+                        <i class="material-icons">assignment</i>
+                        <span class="hide-menu">Categories</span>
                     </a>
                 </li>
 

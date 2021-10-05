@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
@@ -20,6 +21,9 @@ use App\Http\Controllers\Admin\UserController;
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');
     Route::get('','App\Http\Controllers\Admin\DashboardController@index');
+
+    Route::resource('categories', CategoryController::class);
+
     Route::resource('users', UserController::class);
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
