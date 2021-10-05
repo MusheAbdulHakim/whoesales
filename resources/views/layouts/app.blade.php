@@ -101,6 +101,10 @@
     <script src="{{asset('assets/libs/toastr/build/toastr.min.js')}}"></script>
     <!-- ============================================================== -->
     <script src="{{asset('dist/js/custom.min.js')}}"></script>
+    {{-- form repeatable scripts  --}}
+    <script src="{{asset('assets/libs/jquery.repeater/jquery.repeater.min.js')}}"></script>
+    <script src="{{asset('assets/extra-libs/jquery.repeater/repeater-init.js')}}"></script>
+    <script src="{{asset('assets/extra-libs/jquery.repeater/dff.js')}}"></script>
     <script>
         $('body').on('click', '.materialert .close-alert', function() {
             $(this).parent().fadeOut(300, function() {
