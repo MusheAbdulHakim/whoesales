@@ -17,6 +17,13 @@
                 </li>
 
                 <li>
+                    <a href="{{route('suppliers.index')}}" class="collapsible-header">
+                        <i class="material-icons">group</i>
+                        <span class="hide-menu">Suppliers</span>
+                    </a>
+                </li>
+
+                <li>
                     <a class="collapsible-header has-arrow"><i class="material-icons">verified_user</i><span class="hide-menu">Authentication</span></a>
                     <div class="collapsible-body">
                         <ul class="collapsible" data-collapsible="accordion">
