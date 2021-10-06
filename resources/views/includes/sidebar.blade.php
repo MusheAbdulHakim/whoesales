@@ -22,6 +22,12 @@
                         <span class="hide-menu">Suppliers</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('customers.index')}}" class="collapsible-header">
+                        <i class="material-icons">group</i>
+                        <span class="hide-menu">Customers</span>
+                    </a>
+                </li>
 
                 <li>
                     <a class="collapsible-header has-arrow"><i class="material-icons">verified_user</i><span class="hide-menu">Authentication</span></a>

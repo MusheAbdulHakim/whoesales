@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CustomerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
@@ -29,7 +30,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('categories', CategoryController::class);
     Route::resource('suppliers', SupplierController::class);
-
+    Route::resource('customers',CustomerController::class);
     Route::resource('users', UserController::class);
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
