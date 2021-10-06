@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\SupplierController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\UserProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,9 @@ use App\Http\Controllers\Admin\UserController;
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');
     Route::get('','App\Http\Controllers\Admin\DashboardController@index');
+    Route::get('user-profile',[UserProfileController::class,'index'])->name('profile');
+    Route::post('user-profile',[UserProfileController::class,'updateProfile'])->name('update-profile');
+    Route::post('update-password',[UserProfileController::class,'updatePassword'])->name('update-password');
 
     Route::resource('categories', CategoryController::class);
     Route::resource('suppliers', SupplierController::class);
