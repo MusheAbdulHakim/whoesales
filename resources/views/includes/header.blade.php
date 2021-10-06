@@ -173,11 +173,11 @@
                 <!-- ============================================================== -->
                 <!-- Profile icon scss in header.scss -->
                 <!-- ============================================================== -->
-                <li><a class="dropdown-trigger" href="javascript: void(0);" data-target="user_dropdown"><img src="../../assets/images/users/2.jpg" alt="user" class="circle profile-pic"></a>
+                <li><a class="dropdown-trigger" href="javascript: void(0);" data-target="user_dropdown"><img src="{{!empty(auth()->user()->avatar) ? asset('storage/users/'.auth()->user()->avatar) : asset('assets/images/users/2.jpg')}}" alt="user" class="circle profile-pic"></a>
                     <ul id="user_dropdown" class="mailbox dropdown-content dropdown-user">
                         <li>
                             <div class="dw-user-box">
-                                <div class="u-img"><img src="{{asset('assets/images/users/2.jpg')}}" alt="user"></div>
+                                <div class="u-img"><img src="{{!empty(auth()->user()->avatar) ? asset('storage/users/'.auth()->user()->avatar) : asset('assets/images/users/2.jpg')}}" alt="user"></div>
                                 <div class="u-text">
                                     <h4>{{auth()->user()->name}}</h4>
                                     <p>{{auth()->user()->email}}</p>
@@ -185,9 +185,9 @@
                             </div>
                         </li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"><i class="material-icons">account_circle</i> My Profile</a></li>
+                        <li><a href="{{route('profile')}}"><i class="material-icons">account_circle</i> My Profile</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"><i class="material-icons">settings</i> Account Setting</a></li>
+                        <li><a href="{{route('profile')}}"><i class="material-icons">settings</i> Account Setting</a></li>
                         <li role="separator" class="divider"></li>
                         <li>
                             <form action="{{route('logout')}}" method="post">
