@@ -34,6 +34,12 @@
                         <span class="hide-menu">Customers</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('backup.index')}}" class="collapsible-header">
+                        <i class="material-icons">backup</i>
+                        <span class="hide-menu">Backups</span>
+                    </a>
+                </li>
 
                 <li>
                     <a class="collapsible-header has-arrow"><i class="material-icons">verified_user</i><span class="hide-menu">Authentication</span></a>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BackupController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
@@ -36,5 +37,10 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
+
+    Route::get('backup', [BackupController::class,'index'])->name('backup.index');
+    Route::put('backup/create', [BackupController::class,'create'])->name('backup.store');
+    Route::get('backup/download/{file_name?}', [BackupController::class,'download'])->name('backup.download');
+    Route::delete('backup/delete/{file_name?}', [BackupController::class,'destroy'])->where('file_name', '(.*)')->name('backup.destroy');
 });
 
