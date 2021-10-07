@@ -33,7 +33,7 @@
                             <td>{{$supplier->address}}</td>
                             <td>
                                 @foreach ($supplier->products as $product)
-                                    <span>{{implode(",",$product)}}</span>
+                                    <span class="chip">{{implode(",",$product)}}</span>
                                 @endforeach
                             </td>
                             <td>{{$supplier->comment}}</td>
