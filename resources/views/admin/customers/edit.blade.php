@@ -37,7 +37,7 @@
                     
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea name="comment" value="{{old('comment') ?? $customer->comment}}" id="comment" cols="30" rows="15">{{$customer->comment}}</textarea>
+                            <textarea name="comment" value="{{old('comment') ?? $customer->comment}}" id="comment" class="materialize-textarea" data-length="255">{{$customer->comment}}</textarea>
                             <label for="comment">Comment</label>
                         </div>
                     </div>
