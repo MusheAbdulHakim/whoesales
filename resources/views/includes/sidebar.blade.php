@@ -23,6 +23,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{route('purchases.index')}}" class="collapsible-header">
+                        <i class="material-icons">receipt</i>
+                        <span class="hide-menu">Purchases</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{route('customers.index')}}" class="collapsible-header">
                         <i class="material-icons">group</i>
                         <span class="hide-menu">Customers</span>
