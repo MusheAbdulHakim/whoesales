@@ -24,8 +24,14 @@
                 </li>
                 <li>
                     <a href="{{route('purchases.index')}}" class="collapsible-header">
-                        <i class="material-icons">receipt</i>
+                        <i class="material-icons">add_shopping_cart</i>
                         <span class="hide-menu">Purchases</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('products.index')}}" class="collapsible-header">
+                        <i class="material-icons">business_center</i>
+                        <span class="hide-menu">Products</span>
                     </a>
                 </li>
                 <li>

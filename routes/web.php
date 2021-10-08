@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\Admin\BackupController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\BackupController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\PurchaseController;
@@ -33,6 +34,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('categories', CategoryController::class);
     Route::resource('suppliers', SupplierController::class);
     Route::resource('purchases', PurchaseController::class);
+    Route::resource('products', ProductController::class);
     Route::resource('customers',CustomerController::class);
     Route::resource('users', UserController::class);
     Route::resource('roles', RoleController::class);
