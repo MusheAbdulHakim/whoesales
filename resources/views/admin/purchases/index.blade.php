@@ -9,13 +9,15 @@
     <div class="col s12">
         <div class="card">
             <div class="card-content">
-                <a href="{{route('purchases.create')}}"><button class="btn btn-primary right">Create Category</button></a>
+                <a href="{{route('purchases.create')}}"><button class="btn btn-primary right">Create Purchase</button></a>
                 <h5 class="card-title">Purchases</h5>
                 <table id="file_export" class="table table-striped table-bordered display">
                     <thead>
                         <tr>
-                            <th>Products</th>
-                            <th>PurchaseCost</th>
+                            <th>Product (s)</th>
+                            <th>Product Quantity</th>
+                            <th>Product Expiry Date</th>
+                            <th>Purchase  Cost</th>
                             <th>Comment</th>
                             <th>Action</th>
                         </tr>
@@ -25,11 +27,12 @@
                         @foreach ($purchases as $purchase)
                         <tr>
                             <td>
-                                @foreach ($purchase->products as $product)   
+                                @foreach ($purchase->products as $product) 
                                 <span class="chip">{{$product['name']}}</span>
                                 @endforeach
                             </td>
-                            
+                            <td>{{$product['quantity']}}</td>
+                            <td>{{$product['expiry_date']}}</td>
                             <td>{{$purchase->cost}}</td>
                             <td>{{$purchase->comment}}</td>
                             <td>
