@@ -32,6 +32,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('user-profile',[UserProfileController::class,'updateProfile'])->name('update-profile');
     Route::post('update-password',[UserProfileController::class,'updatePassword'])->name('update-password');
 
+    Route::get('sales/print',[SaleController::class,'print'])->name('sales.print');
+
+
     Route::resource('categories', CategoryController::class);
     Route::resource('suppliers', SupplierController::class);
     Route::resource('purchases', PurchaseController::class);
