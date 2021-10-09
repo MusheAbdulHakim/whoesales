@@ -28,7 +28,7 @@
                             <input type="hidden" name="product" id="product_name">
                         </div>
                         <div class="input-field col s6">
-                            <select name="category" id="category">
+                            <select class="autocomplete" name="category" id="category">
                                 <option disabled selected>Choose Product Category</option>
                                 @if (!empty(App\Models\Category::get()))
                                     @foreach (App\Models\Category::get() as $category)
