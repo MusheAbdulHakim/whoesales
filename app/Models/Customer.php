@@ -13,4 +13,8 @@ class Customer extends Model
         'name','phone','email',
         'address','comment'
     ];
+
+    public function sales(){
+        return $this->hasMany(Sale::class);
+    }
 }
