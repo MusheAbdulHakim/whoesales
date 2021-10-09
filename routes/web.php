@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SaleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\BackupController;
 use App\Http\Controllers\Admin\ProductController;
@@ -35,6 +36,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('suppliers', SupplierController::class);
     Route::resource('purchases', PurchaseController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('sales', SaleController::class);
     Route::resource('customers',CustomerController::class);
     Route::resource('users', UserController::class);
     Route::resource('roles', RoleController::class);

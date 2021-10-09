@@ -35,6 +35,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{route('sales.index')}}" class="collapsible-header">
+                        <i class="material-icons">equalizer</i>
+                        <span class="hide-menu">Sales</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{route('customers.index')}}" class="collapsible-header">
                         <i class="material-icons">group</i>
                         <span class="hide-menu">Customers</span>

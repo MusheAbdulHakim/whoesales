@@ -11,6 +11,7 @@
     <link href="{{asset('dist/css/style.css')}}" rel="stylesheet">
     <!-- General Plugins -->
     <link href="{{asset('assets/libs/toastr/build/toastr.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('assets/libs/select2/dist/css/select2.min.css')}}">
     <!-- This page CSS -->
     @stack('page-css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -105,6 +106,7 @@
     <script src="{{asset('assets/libs/jquery.repeater/jquery.repeater.min.js')}}"></script>
     <script src="{{asset('assets/extra-libs/jquery.repeater/repeater-init.js')}}"></script>
     <script src="{{asset('assets/extra-libs/jquery.repeater/dff.js')}}"></script>
+    <script src="{{asset('assets/libs/select2/dist/js/select2.min.js')}}"></script>
     <script>
         $('body').on('click', '.materialert .close-alert', function() {
             $(this).parent().fadeOut(300, function() {

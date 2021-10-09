@@ -19,7 +19,7 @@
                 <div class="d-flex no-block align-items-center">
                     <div>
                         <h2 class="white-text m-b-5">{{App\Models\User::count()}}</h2>
-                        <h6 class="white-text op-5 light-blue-text">Users</h6>
+                        <a href="{{route('users.index')}}"><h6 class="white-text op-5 light-blue-text">Users</h6></a>
                     </div>
                     <div class="ml-auto">
                         <span class="white-text display-6"><i class="material-icons">group</i></span>
@@ -33,11 +33,11 @@
             <div class="card-content">
                 <div class="d-flex no-block align-items-center">
                     <div>
-                        <h2 class="white-text m-b-5">520</h2>
-                        <h6 class="white-text op-5">News Feed</h6>
+                        <h2 class="white-text m-b-5">{{App\Models\Purchase::count()}}</h2>
+                        <a href="{{route('purchases.index')}}"><h6 class="white-text op-5">Purchases</h6></a>
                     </div>
                     <div class="ml-auto">
-                        <span class="white-text display-6"><i class="material-icons">receipt</i></span>
+                        <span class="white-text display-6"><i class="material-icons">add_shopping_cart</i></span>
                     </div>
                 </div>
             </div>
@@ -155,85 +155,7 @@
 <!-- ============================================================== -->
 <!-- Sales -->
 <!-- ============================================================== -->
-<div class="row">
-    <div class="col s12 l4">
-        <div class="card">
-            <div class="card-content">
-                <h5 class="card-title">Messages</h5>
-                <div class="message-box">
-                    <div class="message-widget message-scroll">
-                        <!-- Message -->
-                        <a href="javascript:void(0)">
-                            <div class="user-img"> <img src="../../assets/images/users/d1.jpg" alt="user" class="circle"> <span class="profile-status online pull-right"></span> </div>
-                            <div class="mail-contnet">
-                                <h5>Pavan kumar</h5> <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
-                        </a>
-                        <!-- Message -->
-                        <a href="javascript:void(0)">
-                            <div class="user-img"> <img src="../../assets/images/users/d2.jpg" alt="user" class="circle"> <span class="profile-status busy pull-right"></span> </div>
-                            <div class="mail-contnet">
-                                <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
-                        </a>
-                        <!-- Message -->
-                        <a href="javascript:void(0)">
-                            <div class="user-img"> <img src="../../assets/images/users/4.jpg" alt="user" class="circle"> <span class="profile-status away pull-right"></span> </div>
-                            <div class="mail-contnet">
-                                <h5>Arijit Sinh</h5> <span class="mail-desc">Simply dummy text of the printing and typesetting industry.</span> <span class="time">9:08 AM</span> </div>
-                        </a>
-                        <!-- Message -->
-                        <a href="javascript:void(0)">
-                            <div class="user-img"> <img src="../../assets/images/users/d4.jpg" alt="user" class="circle"> <span class="profile-status offline pull-right"></span> </div>
-                            <div class="mail-contnet">
-                                <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
-                        </a>
-                        <!-- Message -->
-                        <a href="javascript:void(0)">
-                            <div class="user-img"> <img src="../../assets/images/users/d5.jpg" alt="user" class="circle"> <span class="profile-status online pull-right"></span> </div>
-                            <div class="mail-contnet">
-                                <h5>Pavan kumar</h5> <span class="mail-desc">Welcome to the Elite Admin</span> <span class="time">9:30 AM</span> </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 l8">
-        <div class="card news-slide" style="background:url(../../assets/images/carousel/img6.jpg) center center / cover;">
-            <div class="carousel carousel-slider" >
-                <a class="carousel-item" href="#one!">
-                    <div class="carousel-caption">
-                        <span class="label label-danger label-rounded">News</span>
-                        <h3 class="m-t-5 font-light white-text">Market Stock exchange status</h3>
-                        <p class="white-text">It has survived not only five centuries, but also the leap into electronic typesetting</p>
-                        <div class="row">
-                            <div class="col m4 m-t-10">
-                                <h4 class="m-b-0 green-text"><i class="ti-arrow-up"></i>350</h4><span class="white-text op-5">Reliance</span>
-                            </div>
-                            <div class="col m4 m-t-10">
-                                <h4 class="m-b-0 orange-text text-darken-2"><i class="ti-arrow-down"></i>-150</h4><span class="white-text op-5">Birla</span>
-                            </div>
-                            <div class="col m4 m-t-10">
-                                <h4 class="m-b-0 green-text"><i class="ti-arrow-up"></i>650</h4><span class="white-text op-5">Tata</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="carousel-item" href="#one!" style="background:url(../../assets/images/carousel/img6.jpg) center center / cover;">
-                    <div class="carousel-caption">
-                        <span class="label label-danger label-rounded">Personal</span>
-                        <p class="white-text m-t-10">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                    </div>
-                </a>
-                <a class="carousel-item" href="#one!" style="background:url(../../assets/images/carousel/img6.jpg) center center / cover;">
-                    <div class="carousel-caption">
-                        <span class="label label-info label-rounded">Design</span>
-                        <p class="white-text m-t-10">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- ============================================================== -->
 <!-- product sales anf active users -->
 <!-- ============================================================== -->
