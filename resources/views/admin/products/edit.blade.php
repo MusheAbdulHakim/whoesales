@@ -48,6 +48,7 @@
                         <div class="input-field col s6">
                             <input id="discount" name="discount" value="{{$product->discount ?? '0'}}" type="text">
                             <label for="discount">Discount (%)</label>
+                            <small>Discounts are calculated in percentages.Eg if 5% just enter 5.</small>
                         </div>
                     </div>
 
