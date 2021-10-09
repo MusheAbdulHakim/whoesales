@@ -20,7 +20,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Location</th>
+                            <th>Disk</th>
                             <th>Backup Date</th>
                             <th>File Size</th>
                             <th>Actions</th>
@@ -44,7 +44,7 @@
                                         <div class="col s6">
                                             @if ($b['download'])
                                             <a href="{{ route('backup.download') }}?disk={{ $b['disk'] }}&path={{ urlencode($b['file_path']) }}&file_name={{ urlencode($b['file_name']) }}">
-                                                <button class="btn tooltipped" data-position="top" data-delay="50" data-tooltip="Download Backup File">
+                                                <button class="btn tooltipped" data-position="top" data-delay="50" data-tooltip="Download Backup">
                                                     <i class="material-icons">cloud_download</i>
                                                 </button>
                                             </a>
