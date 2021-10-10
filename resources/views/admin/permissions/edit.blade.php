@@ -15,7 +15,7 @@
                     @method("PUT")
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="permission" name="permission" value="{{$permission->name}}" type="text">
+                            <input id="permission" name="permission[]" value="{{$permission->name}}" type="text">
                             <label for="permission">Permission</label>
                         </div>
                     </div>
