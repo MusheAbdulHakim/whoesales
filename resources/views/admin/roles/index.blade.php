@@ -28,7 +28,7 @@
                             <td>{{$role->name}}</td>
                             <td>
                                 @foreach ($role->getAllPermissions() as $permission)
-                                <span>{{ $permission->name }}</span>
+                                <span class="chip">{{ $permission->name }}</span>
                                 @endforeach
                             </td>
                             <td>
