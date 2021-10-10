@@ -10,16 +10,22 @@
         <div class="card">
             <div class="card-content">
                 <div class="center-align m-t-30">
-                     <img src="{{!empty(auth()->user()->avatar) ? asset('storage/users/'.auth()->user()->avatar) : asset('assets/images/users/2.jpg')}}" class="circle" width="150" />
+                     <img src="{{!empty(auth()->user()->avatar) ? asset('storage/users/'.auth()->user()->avatar) : asset('assets/images/users/2.jpg')}}" class="circle"  width="150" />
                 </div>
             </div>
             <hr>
             <div class="card-content">
                 <small>Name</small>
                 <h6>{{auth()->user()->name}}</h6>
+
                 <small>Email address </small>
                 <h6>{{auth()->user()->email}}</h6>
-               
+
+                <small>Roles</small>
+                <br>
+                @foreach (auth()->user()->roles as $role)
+                <h6 class="chip">{{$role->name}}</h6>
+                @endforeach
             </div>
         </div>
     </div>
