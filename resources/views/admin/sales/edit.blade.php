@@ -15,7 +15,7 @@
                     @method("PUT")
                     <div class="row">
                         <div class="input-field col s12">
-                            <select class="select2" name="products" id="product" multiple>
+                            <select class="select2" name="products" id="product">
                                 @foreach (App\Models\Product::get() as $product)
                                 <option {{($sale->product_id == $product->id) ? 'selected': ''}} value="{{$product->id}}">{{$product->product}}</option>
                                 @endforeach
