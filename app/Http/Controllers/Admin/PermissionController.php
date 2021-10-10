@@ -82,9 +82,11 @@ class PermissionController extends Controller
         $this->validate($request,[
             'permission' => 'required|max:255'
         ]);
-        $permission = Permission::findOrFail($id);
-        $permission->update(['name' => $request->permission]);
-        $permission->assignRole('super-admin');
+        foreach(explode(',',$request->permission) as $permission){
+            $permission = Permission::findOrFail($id);
+            $permission->update(['name' => $permission]);
+            $permission->assignRole('super-admin');
+        }
         $notification = notify("user permission updated successfully");
         return redirect()->route('permissions.index')->with($notification);
     }
