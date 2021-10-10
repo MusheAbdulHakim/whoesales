@@ -82,7 +82,7 @@ class SaleController extends Controller
                 'products' => array($purchase_products),
             ]);
             
-            Sale::create([
+            $sale = Sale::create([
                 'product_id' => $request->products,
                 'customer_id' => $request->customer,
                 'reference' => uniqid('Sale-'),
@@ -98,7 +98,7 @@ class SaleController extends Controller
         else{
             $notification = notify('Please check purchase product quantity','warning');
         }
-
+        
         return redirect()->route('sales.index')->with($notification);   
     }
 
