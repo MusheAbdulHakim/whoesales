@@ -32,7 +32,7 @@
                             <td>{{$sale->customer->name}}</td>
                             <td>{{$sale->quantity}}</td>
                             <td>{{$sale->subtotal}}</td>
-                            <td>{{date_format(date_create($sale->created_at),'Y M, Y')}}</td>
+                            <td>{{ \Carbon\Carbon::parse($sale->created_at)->diffForHumans() }}</td>
                             <td>
                                 <a href="{{route('sales.edit',$sale)}}"><button class="btn tooltipped" data-position="top" data-delay="50" data-tooltip="Edit"><i class="material-icons">edit</i></button></a>
                                 <br><br>
