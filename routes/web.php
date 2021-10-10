@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\PurchaseController;
 use App\Http\Controllers\Admin\SupplierController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserProfileController;
 
 /*
@@ -33,6 +34,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('update-password',[UserProfileController::class,'updatePassword'])->name('update-password');
 
     Route::get('sales/print',[SaleController::class,'print'])->name('sales.print');
+
+    Route::get('settings',[SettingController::class,'index'])->name('settings');
+    Route::post('settings',[SettingController::class,'store']);
 
 
     Route::resource('categories', CategoryController::class);
