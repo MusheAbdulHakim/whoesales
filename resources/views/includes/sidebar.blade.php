@@ -57,7 +57,7 @@
                 </li>
                 @endcan
                 @can('view-backups')
-                  <li>
+                    <li>
                         <a href="{{route('backup.index')}}" class="collapsible-header">
                             <i class="material-icons">backup</i>
                             <span class="hide-menu">Backups</span>
@@ -94,6 +94,14 @@
                             @endcan
                         </ul>
                     </div>
+                </li>
+                @endcan
+                @can('view-settings')
+                <li>
+                    <a href="{{route('settings')}}" class="collapsible-header">
+                        <i class="material-icons">settings</i>
+                        <span class="hide-menu">Settings</span>
+                    </a>
                 </li>
                 @endcan
                 <li>
