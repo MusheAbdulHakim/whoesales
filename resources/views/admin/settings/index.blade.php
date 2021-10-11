@@ -9,12 +9,12 @@
     <div class="col s12 l8">
         <div class="card">
             <div class="card-content">
-                <h5 class="card-title activator">Create New Category </h5>
+                <h5 class="card-title activator">General App Settings</h5>
                 <form method="post" action="{{route('settings')}}">
                     @csrf
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="app" name="app" type="text" value="{{setting('app')}}">
+                            <input id="app" name="app" type="text" value="">
                             <label for="app">App Name</label>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                         <div class="input-field col s12">
                             <div class="file-field input-field">
                                 <div class="btn blue darken-1">
-                                    <input id="logo" name="logo" type="file" value="{{setting('logo')}}">
+                                    <input id="logo" name="logo" type="file" value="">
                                     <label for="logo">App Logo</label>
                                 </div>
                                 <div class="file-path-wrapper">
@@ -35,7 +35,7 @@
                         <div class="input-field col s12">
                             <div class="file-field input-field">
                                 <div class="btn blue darken-1">
-                                    <input id="favicon" name="favicon" type="file" value="{{setting('favicon')}}">
+                                    <input id="favicon" name="favicon" type="file" value="">
                                     <label for="favicon">App Favicon</label>
                                 </div>
                                 <div class="file-path-wrapper">
@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <label>
-                                <input name="printpos" {{(setting('printpos')) ? 'checked' : ''}} value="{{setting('printpos')}}" type="checkbox" />
+                                <input name="printpos" value="" type="checkbox" />
                                 <span>Print Receipt</span>
                             </label>
                         </div>
