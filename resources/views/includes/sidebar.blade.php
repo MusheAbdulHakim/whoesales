@@ -105,6 +105,12 @@
                 </li>
                 @endcan
                 <li>
+                    <a href="{{route('generate-reports')}}" class="collapsible-header">
+                        <i class="material-icons">assessment</i>
+                        <span class="hide-menu">Reports</span>
+                    </a>
+                </li>
+                <li>
                     <form action="{{route('logout')}}" method="post">
                         @csrf
                         <button class="btn collapsible-header" type="submit"><i class="material-icons">power_settings_new</i><span class="hide-menu"> Log Out </span></button>

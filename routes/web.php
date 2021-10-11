@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserProfileController;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('settings',[SettingController::class,'index'])->name('settings');
     Route::post('settings',[SettingController::class,'store']);
+
+    Route::get('reports',[ReportController::class,'index'])->name('generate-reports');
 
 
     Route::resource('categories', CategoryController::class);
