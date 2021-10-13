@@ -26,7 +26,7 @@
                                 @endforeach
                             </select>
                             <label for="purchase">Product Name</label>
-                            <input type="hidden" name="product" id="product_name">
+                            <input type="hidden" name="product" value="{{$product->product}}" id="product_name">
                         </div>
                         <div class="input-field col s6">
                             <select name="category" id="category">
@@ -92,6 +92,7 @@
 
         $('select#purchase').on('change', function() {
             var product_name = $('select#purchase option:selected').attr('data-product');
+            console.log(product_name)
             $('#product_name').val(product_name);
         });
 

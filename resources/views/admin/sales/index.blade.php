@@ -19,7 +19,7 @@
                             <th>Customer</th>
                             <th>Quantity</th>
                             <th>Amount Paid</th>
-                            <th>Date</th>
+                            <th>Time</th>
                             <th>Action</th>
                         </tr>
                     </thead>

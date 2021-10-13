@@ -36,7 +36,7 @@
                 <li>
                     <a href="{{route('products.index')}}" class="collapsible-header">
                         <i class="material-icons">business_center</i>
-                        <span class="hide-menu">Products</span>
+                        <span class="hide-menu">Stock</span>
                     </a>
                 </li>
                 @endcan
@@ -104,12 +104,12 @@
                     </a>
                 </li>
                 @endcan
-                <li>
+                {{-- <li>
                     <a href="{{route('generate-reports')}}" class="collapsible-header">
                         <i class="material-icons">assessment</i>
                         <span class="hide-menu">Reports</span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <form action="{{route('logout')}}" method="post">
                         @csrf

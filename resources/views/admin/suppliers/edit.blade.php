@@ -9,7 +9,7 @@
     <div class="col s12 l12">
         <div class="card">
             <div class="card-content">
-                <h5 class="card-title activator">Edit Supplier </h5>
+                <h5 class="card-title activator">Edit Stock Product </h5>
                 <form method="post" action="{{route('suppliers.update',$supplier)}}">
                     @csrf
                     @method("PUT")

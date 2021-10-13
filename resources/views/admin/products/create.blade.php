@@ -9,7 +9,7 @@
     <div class="col s12 l11">
         <div class="card">
             <div class="card-content">
-                <h5 class="card-title activator">Create New Product </h5>
+                <h5 class="card-title activator">Add Product To Stock<h5>
                 <form method="post" enctype="multipart/form-data" action="{{route('products.store')}}">
                     @csrf
                     <div class="row">

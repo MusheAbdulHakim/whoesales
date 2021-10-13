@@ -19,7 +19,7 @@
                             <th>Phone</th>
                             <th>Address</th>
                             <th>Products</th>
-                            <th>Comment</th>
+                            <th>Date</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -36,7 +36,7 @@
                                     <span class="chip">{{implode(",",$product)}}</span>
                                 @endforeach
                             </td>
-                            <td>{{$supplier->comment}}</td>
+                            <td>{{date_format(date_create($supplier->created_at),'D M, Y')}}</td>
                             <td>
                                 <a href="{{route('suppliers.edit',$supplier)}}"><button class="btn tooltipped" data-position="top" data-delay="50" data-tooltip="Edit"><i class="material-icons">edit</i></button></a>
                                 <br><br>

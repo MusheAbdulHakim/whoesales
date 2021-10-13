@@ -199,7 +199,7 @@ class SaleController extends Controller
         $result = Builder::create()
             ->writer(new PngWriter())
             ->writerOptions([])
-            ->data('Custom QR code contents')
+            ->data('this is a sales content')
             ->encoding(new Encoding('UTF-8'))
             ->errorCorrectionLevel(new ErrorCorrectionLevelHigh())
             ->size(200)

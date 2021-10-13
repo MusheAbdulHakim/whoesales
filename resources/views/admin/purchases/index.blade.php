@@ -18,7 +18,7 @@
                             <th>Product Quantity</th>
                             <th>Product Expiry Date</th>
                             <th>Purchase  Cost</th>
-                            <th>Comment</th>
+                            <th>Date Added</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -34,7 +34,7 @@
                             <td>{{$product['quantity']}}</td>
                             <td>{{$product['expiry_date']}}</td>
                             <td>{{$purchase->cost}}</td>
-                            <td>{{$purchase->comment}}</td>
+                            <td>{{date_format(date_create($purchase->created_at),'D M, Y')}}</td>
                             <td>
                                 <a href="{{route('purchases.edit',$purchase)}}"><button class="btn tooltipped" data-position="top" data-delay="50" data-tooltip="Edit"><i class="material-icons">edit</i></button></a>
                                 <br><br>

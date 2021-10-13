@@ -113,7 +113,6 @@ class ProductController extends Controller
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('storage/products'), $imageName);
         }
-
         $product->update([
             'purchase_id' => $request->purchase,
             'category_id' => $request->category,

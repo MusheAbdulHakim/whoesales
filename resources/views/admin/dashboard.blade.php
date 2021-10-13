@@ -66,7 +66,7 @@
             <div class="card-content">
                 <div class="d-flex no-block align-items-center">
                     <div>
-                        <h2 class="white-text m-b-5">{{App\Models\Sale::whereDate('created_at','=',Carbon\Carbon::now())->sum('subtotal')}}</h2>
+                        <h2 class="white-text m-b-5">GHC {{App\Models\Sale::whereDate('created_at','=',Carbon\Carbon::now())->sum('subtotal')}}</h2>
                         <h6 class="white-text op-5">Today Sales Cash</h6>
                     </div>
                     <div class="ml-auto">
@@ -80,7 +80,7 @@
 <!-- ============================================================== -->
 <!-- Sales Summery -->
 <!-- ============================================================== -->
-<div class="row">
+{{-- <div class="row">
     <div class="col s12 l8">
         <div class="card">
             <div class="card-content">
@@ -151,7 +151,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- ============================================================== -->
 <!-- Sales -->
 <!-- ============================================================== -->
@@ -177,7 +177,7 @@
                                 <th>Customer</th>
                                 <th>Quantity</th>
                                 <th>Amount Paid</th>
-                                <th>Date</th>
+                                <th>Time</th>
                             </tr>
                         </thead>
                         <tbody>
